@@ -1,0 +1,80 @@
+# ============================================
+# Python
+# ============================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# PyInstaller
+# 这些是由 PyInstaller 自动生成的构建文件
+build/
+dist/
+*.spec
+hooks/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ============================================
+# 项目特定 - 构建脚本和临时文件
+# ============================================
+# Windows批处理构建脚本（用户可根据需要重新创建）
+build_exe.bat
+build_exe_simple.bat
+
+# 临时工具脚本
+create_png.py
+
+# 测试文件
+test.txt
+
+# 说明文档的HTML版本（由Markdown生成）
+发票类型说明.html
+
+# 打包相关文档（可选，保留主要README即可）
+BUILD_OPTIONS.md
+README_PACKAGE.md
+
+# ============================================
+# 用户数据（运行时生成）
+# ============================================
+# 用户配置文件（在用户主目录，但以防万一）
+.invoice_renamer_config.json
+
+# 日志文件（在用户主目录，但以防万一）
+.invoice_renamer_logs/
+
+# ============================================
+# C#构建输出（排除生成的二进制文件和本地脚本）
+# ============================================
+csharp/bin/
+csharp/obj/
+csharp/*.exe
+csharp/build.bat
+csharp/test.bat
+*.exe
+*.dll
+*.pdb
+*.user
+*.suo
