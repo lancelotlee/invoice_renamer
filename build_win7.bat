@@ -75,7 +75,7 @@ echo     完成
 echo.
 
 echo [3/5] 打包程序...
-%PYTHON_CMD% -m PyInstaller --clean --onefile --windowed --exclude-module cryptography --name "发票重命名工具_Win7版" invoice_renamer.py
+%PYTHON_CMD% -m PyInstaller --clean --onefile --windowed --name "发票重命名工具_Win7版" invoice_renamer.py
 echo     完成
 echo.
 

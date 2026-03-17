@@ -461,6 +461,10 @@ class InvoiceRenamerApp:
         fail_count = 0
         
         for i, pdf_path in enumerate(pdf_files):
+            # 目录模式下，pdf_files只是文件名，需要拼接完整路径
+            if input_mode == "directory":
+                pdf_path = os.path.join(input_dir, pdf_path)
+            
             filename = os.path.basename(pdf_path)
             self.progress_var.set((i + 1) / len(pdf_files) * 100)
             self.status_var.set(f"正在处理: {filename}")

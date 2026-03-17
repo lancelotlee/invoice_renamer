@@ -12,7 +12,10 @@ chardet==4.0.0
 
 # 打包工具（Win7兼容版本）
 PyInstaller==4.10
+pyinstaller-hooks-contrib==2022.0
+
+# cryptography 必须使用兼容版本
+cryptography==36.0.2
 
 # 其他依赖
 Pillow==8.4.0
-Wand==0.6.7
