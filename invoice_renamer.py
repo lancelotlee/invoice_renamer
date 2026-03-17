@@ -24,8 +24,9 @@ class InvoiceRenamerApp:
     def __init__(self, root):
         self.root = root
         self.root.title("发票重命名工具 v1.0")
-        self.root.geometry("700x550")
+        self.root.geometry("750x650")
         self.root.resizable(True, True)
+        self.root.minsize(700, 600)
         
         # 配置文件路径
         self.config_file = Path.home() / '.invoice_renamer_config.json'
@@ -65,10 +66,11 @@ class InvoiceRenamerApp:
         main_frame = ttk.Frame(self.root, padding="10")
         main_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
         
-        # 配置grid权重
+        # 配置grid权重 - 让第1列可横向扩展，第6行（日志区域）可纵向扩展
         self.root.columnconfigure(0, weight=1)
         self.root.rowconfigure(0, weight=1)
         main_frame.columnconfigure(1, weight=1)
+        main_frame.rowconfigure(7, weight=1)  # 日志区域可扩展
         
         # 发票类型选择
         ttk.Label(main_frame, text="发票类型:").grid(row=0, column=0, sticky=tk.W, pady=5)
@@ -144,7 +146,7 @@ class InvoiceRenamerApp:
         log_frame.rowconfigure(0, weight=1)
         main_frame.rowconfigure(6, weight=1)
         
-        self.log_text = scrolledtext.ScrolledText(log_frame, height=15, wrap=tk.WORD)
+        self.log_text = scrolledtext.ScrolledText(log_frame, height=12, wrap=tk.WORD)
         self.log_text.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
         
         # 状态栏
